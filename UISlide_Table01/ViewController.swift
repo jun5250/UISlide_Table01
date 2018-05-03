@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let identifier = "RE"
         let cell = mytableview.dequeueReusableCell(withIdentifier: identifier, for:indexPath)
         
-        let tableValue = String(Int(mySlider.value * 100))
+        let tableValue = String(indexPath.row+Int(mySlider.value * 100))
         cell.textLabel?.text = tableValue
         return cell
     }
